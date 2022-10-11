@@ -5,9 +5,8 @@ const Tropic = ({product}) => {
     
     const {logo,name,total,id}=product;
     return (
-        <div className='cart-grid '>
-            <div className='flex justify-center gap-4  border-yellow-600 '>
-            <div className=" bg-slate-300  card card-compact w-96  shadow-2xl mb-5">
+        <div className='flex justify-center'>     
+            <div className=" bg-slate-300  card card-compact w-96  shadow-xl mb-5">
                 <figure><img src={logo} alt="Shoes" /></figure>
                 <div className="card-body">
                     <h2 className="card-title">{name}!</h2>
@@ -18,7 +17,6 @@ const Tropic = ({product}) => {
                         </button>
                     </div>
                 </div>
-            </div>
             </div>
         </div>
     );

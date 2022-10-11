@@ -23,11 +23,15 @@ const Home = () => {
                      </p>
                 </div>
            </div>
+
+
+           <div className='grid grid-cols-2'>
             {
                 products.data.map(product=><Tropic key={product.id} 
                 product={product}
                 ></Tropic>)
             }
+           </div>
         </div>
     );
 };

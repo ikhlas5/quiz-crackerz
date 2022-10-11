@@ -6,7 +6,7 @@ const Tropics = () => {
     const products= useLoaderData();
     // console.log(products)
     return (
-        <div>
+        <div className='grid grid-cols-2'>
               {
                 products.data.map(product=><Tropic key={product.id} 
                 product={product}
