@@ -4,7 +4,7 @@ const Quiz = ({productDetail}) => {
     console.log(productDetail)
     const{question,correctAnswer,options}=productDetail;
     return (
-        <div className='border border-red-500 m-5'>
+        <div className='border border-red-500 bg-slate-500 m-5'>
             <h1 className='text-3xl'>Quiz Qusation</h1>
             <div className='border border-fuchsia-700'>
                 

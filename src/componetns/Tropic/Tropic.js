@@ -11,7 +11,7 @@ const Tropic = ({product}) => {
                 <div className="card-body">
                     <h2 className="card-title">{name}!</h2>
                     <p>Quiz:{total}</p>
-                    <div className="card-actions justify-end">
+                    <div className="card-actions justify-center">
                     <button className="btn btn-primary">
                         <Link to={`/topic/${id}`}>Start Quize</Link>
                         </button>
