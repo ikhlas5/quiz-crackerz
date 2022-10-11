@@ -4,7 +4,7 @@ import Tropic from '../Tropic/Tropic';
 
 const Tropics = () => {
     const products= useLoaderData();
-    console.log(products)
+    // console.log(products)
     return (
         <div>
               {

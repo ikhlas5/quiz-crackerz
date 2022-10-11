@@ -1,19 +1,24 @@
 import React from 'react';
-
+import { Link } from 'react-router-dom';
+import './Topic.css'
 const Tropic = ({product}) => {
-    const {logo,name,total}=product;
+    const {logo,name,total,id}=product;
     return (
-        <div>
-            <div className="card card-compact w-96 bg-base-100 shadow-xl">
-  <figure><img src={logo} alt="Shoes" /></figure>
-  <div className="card-body">
-    <h2 className="card-title">{name}!</h2>
-    <p>Quiz:{total}</p>
-    <div className="card-actions justify-end">
-      <button className="btn btn-primary">Buy Now</button>
-    </div>
-  </div>
-</div>
+        <div className=''>
+            <div className='cart-grid'>
+            <div className="  card card-compact w-96 bg-base-100 shadow-xl">
+                <figure><img src={logo} alt="Shoes" /></figure>
+                <div className="card-body">
+                    <h2 className="card-title">{name}!</h2>
+                    <p>Quiz:{total}</p>
+                    <div className="card-actions justify-end">
+                    <button className="btn btn-primary">
+                        <Link to={`/topic/${id}`}>Start Quize</Link>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            </div>
         </div>
     );
 };
