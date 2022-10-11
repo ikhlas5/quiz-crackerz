@@ -8,6 +8,7 @@ import Charts from './componetns/Charts/Charts';
 import Blogs from './componetns/Blogs/Blogs';
 import ErrorPage from './componetns/ErrorPage/ErrorPage';
 import ProductDetails from './componetns/ProductDetails/ProductDetails';
+import { ToastContainer } from 'react-toastify';
 
 function App() {
   const router=createBrowserRouter([
@@ -28,6 +29,7 @@ function App() {
           },
           {
             path:'charts',
+            loader:async()=>fetch('https://openapi.programming-hero.com/api/quiz'),
             element:<Charts></Charts>
           },
           {
@@ -45,6 +47,7 @@ function App() {
   return (
     <div className="App">
       <RouterProvider router={router}></RouterProvider>
+     
     </div>
   );
 }

@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import './Topic.css'
 const Tropic = ({product}) => {
+    
     const {logo,name,total,id}=product;
     return (
         <div className='cart-grid '>
