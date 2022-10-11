@@ -1,19 +1,35 @@
 import React from 'react';
-
+import {  CheckCircleIcon } from '@heroicons/react/24/solid'
+import { toast } from 'react-toastify';
 const Quiz = ({productDetail}) => {
     console.log(productDetail)
-    const{question,correctAnswer,options}=productDetail;
+    const{question,correctAnswer,options,id}=productDetail;
+
+    const checkAnswer=(option)=>{
+        if(option === `${correctAnswer}`){
+            toast(`Good Job! Right Answer`,{
+                position:"top-center"
+            });
+        }else{
+            toast(`Opps! Wrong Answer`,{
+                position:"top-center",
+            })
+        }
+    }
     return (
-        <div className='border border-red-500 bg-slate-500 m-5'>
+        <div className=' bg-slate-500 m-5'>
             <h1 className='text-3xl'>Quiz Qusation</h1>
-            <div className='border border-fuchsia-700'>
+            <div className=''>
                 
-            <h1>{question}</h1>
-            <div className=' border m-5 border-orange-600'>
-               <div className='grid grid-cols-2 grid-rows-2'>
-                {options}
-               </div>
-            </div>
+            <h1>Questions:{question}</h1>
+            {
+                options.map(option=>
+                    <button onClick={()=>checkAnswer(option)} className=''>
+                        <input type='radio' id={id} name='fav_language' value='HTML'></input>
+                        <label for={id}>{option}</label>
+                    </button>
+                    )
+            }
             </div>
         </div>
     );
