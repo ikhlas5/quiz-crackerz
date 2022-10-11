@@ -4,9 +4,9 @@ import Quiz from '../Quiz/Quiz';
 import'./ProductDetails.css'
 const ProductDetails = () => {
     const productDetails=useLoaderData().data.questions;
-    // console.log(productDetails);
+    console.log(productDetails);
     return (
-        <div className=''>
+        <div >
             <div>
 
             {

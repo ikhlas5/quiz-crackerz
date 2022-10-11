@@ -4,7 +4,7 @@ import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
 const Quiz = ({productDetail}) => {
-    console.log(productDetail)
+    // console.log(productDetail)
     const{question,correctAnswer,options,id}=productDetail;
 
     const checkAnswer=(option)=>{
