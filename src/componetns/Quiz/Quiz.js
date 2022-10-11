@@ -1,6 +1,6 @@
 import React from 'react';
 import {  CheckCircleIcon } from '@heroicons/react/24/solid'
-import { toast } from 'react-toastify';
+import { toast, ToastContainer } from 'react-toastify';
 const Quiz = ({productDetail}) => {
     console.log(productDetail)
     const{question,correctAnswer,options,id}=productDetail;
@@ -26,10 +26,11 @@ const Quiz = ({productDetail}) => {
                 options.map(option=>
                     <button onClick={()=>checkAnswer(option)} className=''>
                         <input type='radio' id={id} name='fav_language' value='HTML'></input>
-                        <label for={id}>{option}</label>
+                        <label for={id} >{option}</label>
                     </button>
                     )
             }
+            <ToastContainer></ToastContainer>
             </div>
         </div>
     );
