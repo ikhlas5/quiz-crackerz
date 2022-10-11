@@ -7,12 +7,15 @@ const ProductDetails = () => {
     // console.log(productDetails);
     return (
         <div className=''>
+            <div>
+
             {
                 productDetails.map(productDetail=><Quiz  
                 key={productDetail.id} 
                 productDetail={productDetail}>
                 </Quiz>)
             }
+            </div>
         </div>
     );
 };
