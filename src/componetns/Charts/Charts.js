@@ -9,14 +9,37 @@ const Charts = () => {
    console.log(total);
     return (
         <div>
-             <LineChart width={500} height={300} data={total}>
-    <XAxis dataKey="name"/>
-    <YAxis/>
-    <CartesianGrid stroke="#eee" strokeDasharray="5 5"/>
-    <Line type="monotone" dataKey="pv" stroke="#8884d8" activeDot={{r:8}} />
-    <Line type="monotone" dataKey="total" stroke="#82ca9d" />
-    <Tooltip></Tooltip>
-  </LineChart>
+            <h1>
+                {total.length}
+            </h1>
+            <div>
+                  <LineChart width={500} height={300} data={total}>
+                      <Line type="monotone" dataKey="uv"  stroke="#8884d8" activeDot={{ r: 8 }} />
+                      <Line type="monotone" dataKey="pv" stroke="#82ca9d" />
+                        <XAxis dataKey="name"/>
+                        <YAxis total={total}/>
+                        <Tooltip></Tooltip>
+                  </LineChart>
+            </div>
+            <LineChart
+          width={500}
+          height={300}
+          data={total}
+          margin={{
+            top: 5,
+            right: 30,
+            left: 20,
+            bottom: 5,
+          }}
+        >
+          <CartesianGrid strokeDasharray="3 3" />
+          <XAxis dataKey="name" />
+          <YAxis />
+          <Tooltip />
+       
+          <Line type="monotone" dataKey="pv" stroke="#8884d8" activeDot={{ r: 8 }} />
+          <Line type="monotone" dataKey="uv" stroke="#82ca9d" />
+        </LineChart>
         </div>
     );
 };
