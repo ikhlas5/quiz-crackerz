@@ -4,12 +4,9 @@ import Quiz from '../Quiz/Quiz';
 import'./ProductDetails.css'
 const ProductDetails = () => {
     const productDetails=useLoaderData().data.questions;
-    console.log(productDetails);
-    const{question}=productDetails;
-    console.log(question);
+    // console.log(productDetails);
     return (
         <div>
-            <h1>Quiz:{question}</h1>
             {
                 productDetails.map(productDetail=><Quiz  
                 key={productDetail.id} 
