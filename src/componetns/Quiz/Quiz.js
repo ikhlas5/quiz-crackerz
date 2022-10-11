@@ -33,7 +33,7 @@ const Quiz = ({productDetail}) => {
                <div>
                      <h1 className='text-xl font-medium'>Questions: {question}</h1>
                      <button onClick={seeCorrectAnswer} className='float-right mr-10'>
-                        <EyeIcon className='h-6 w-6 text-black-500'></EyeIcon>
+                        <EyeIcon className='h-6 w-6 text-black-500' title='see answer'></EyeIcon>
                      </button>
                 </div> 
             
