@@ -1,5 +1,6 @@
 import React from 'react';
-import { useLoaderData } from 'react-router-dom';
+import { Link, useLoaderData } from 'react-router-dom';
+import Footer from '../Footer/Footer';
 import Tropic from '../Tropic/Tropic';
 import logo from './Quiz.jpg'
 import quiz2 from './Quiz2.jpg'
@@ -22,7 +23,7 @@ const Home = () => {
                     <p className='p-4 text-xl'>Paragraph Writing MCQs Quiz With Answers
                         Below, we have made an exciting Paragraph writing MCQs quiz for you. Ever wondered about the fact that how much do you know about the basics of paragraph writing? Do you know what the main components of a paragraph are? What are...
                      </p>
-                     <button className='text-xl bg-blue-600 text-white px-3 py-1 rounded m-3'>Get Started!</button>
+                     <Link to='/topics' className='text-xl bg-blue-600 text-white px-3 py-1  rounded m-3'>Get Started!</Link>
                 </div>
            </div>
 
@@ -34,6 +35,7 @@ const Home = () => {
                 ></Tropic>)
             }
            </div>
+           
         </div>
     );
 };
