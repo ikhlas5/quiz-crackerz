@@ -3,10 +3,10 @@ import {  CheckCircleIcon, EyeIcon } from '@heroicons/react/24/solid';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
-const Quiz = ({productDetail}) => {
+const Quiz = ({productDetail,data2}) => {
     // console.log(productDetail)
     const{question,correctAnswer,options,id}=productDetail;
-
+    const{name}=data2.data;
     const checkAnswer=(option)=>{
         if(option === `${correctAnswer}`){
             toast.success('Good Job! Right Answer',{
@@ -29,7 +29,7 @@ const Quiz = ({productDetail}) => {
     return (
         <>
         <div className=' bg-indigo-300 m-5  rounded shadow-2xl'>
-            <h1 className='text-3xl font-semibold text-orange-700 pt-10'>Quiz Question</h1>
+            <h1 className='text-3xl font-semibold text-orange-700 pt-10'>Quiz of {name}</h1>
                <div>
                      <h1 className='text-xl font-medium'>Questions: {question}</h1>
                      <button onClick={seeCorrectAnswer} className='float-right mr-10'>
@@ -37,7 +37,7 @@ const Quiz = ({productDetail}) => {
                      </button>
                 </div> 
             
-                <div className='grid grid-cols-2 m-10'>
+                <div className='grid md:grid-cols-2 xl:grid-cols-2 m-10'>
 
                    {
                       options.map(option=>
@@ -62,3 +62,4 @@ const Quiz = ({productDetail}) => {
 };
 
 export default Quiz;
+// product

@@ -1,18 +1,17 @@
 import React from 'react';
 import { useLoaderData } from 'react-router-dom';
 import Quiz from '../Quiz/Quiz';
-import'./ProductDetails.css'
 const ProductDetails = () => {
     const productDetails=useLoaderData().data.questions;
-    console.log(productDetails);
+    const data2=useLoaderData();
     return (
         <div >
             <div>
-
             {
                 productDetails.map(productDetail=><Quiz  
                 key={productDetail.id} 
-                productDetail={productDetail}>
+                productDetail={productDetail}
+                data2={data2}>
                 </Quiz>)
             }
             </div>
